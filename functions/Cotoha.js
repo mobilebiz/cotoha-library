@@ -10,11 +10,11 @@ exports.handler = async function(context, event, callback) {
 
   // アクセストークンを取得する
   cotoha = new Cotoha();
-  await cotoha.getAuthKey(context.COTOHA_CLIENT_ID, context.COTOHA_CLIENT_SECRET)
+  await cotoha.getAuthKey(context.COTOHA_ACCESS_TOKEN_PUBLISH_URL, context.COTOHA_CLIENT_ID, context.COTOHA_CLIENT_SECRET)
   .then(async result => {
     authKey = result.access_token;
     // 感情分析APIの呼び出し
-    const cotoha = new Cotoha(authKey);
+    cotoha = new Cotoha(authKey, context.COTOHA_API_BASE_URL);
     return await cotoha.getSentiment(word);
   })
   .then(result => {
