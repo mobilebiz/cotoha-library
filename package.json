@@ -1,0 +1,31 @@
+{
+  "name": "cotoha-library",
+  "version": "1.0.0",
+  "description": "COTOHA Library for Twilio CLI Serverless",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobilebiz/cotoha-library.git"
+  },
+  "keywords": [
+    "twilio",
+    "twiliocli",
+    "cohoha"
+  ],
+  "author": "Katsumi Takahashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobilebiz/cotoha-library/issues"
+  },
+  "homepage": "https://github.com/mobilebiz/cotoha-library#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^25.4.0",
+    "request-promise": "^4.2.5"
+  }
+}
